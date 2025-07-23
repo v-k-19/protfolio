@@ -1,15 +1,23 @@
-// Load dark mode from localStorage
+// Wait for DOM content to be fully loaded
 window.addEventListener("DOMContentLoaded", () => {
-  const checkbox = document.querySelector(".theme-switch__checkbox");
-  const theme = localStorage.getItem("theme");
+  const toggle = document.getElementById("theme-toggle");
 
-  if (theme === "dark") {
+  // Apply saved theme if it exists
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
     document.body.classList.add("dark");
-    checkbox.checked = true;
+    toggle.checked = true;
   }
 
-  checkbox.addEventListener("change", () => {
+  // Add smooth animation on theme toggle
+  document.body.style.transition = "background-color 0.5s ease, color 0.5s ease";
+
+  // Toggle dark/light mode on switch
+  toggle.addEventListener("change", () => {
     document.body.classList.toggle("dark");
-    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+
+    // Save current theme to localStorage
+    const newTheme = document.body.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
   });
 });
