@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-/* Root Theme Variables */
+/* ========== THEME COLORS ========== */
 :root {
   --bg-light: #f2f2f2;
   --text-light: #111;
@@ -18,7 +18,6 @@
   --highlight: var(--highlight-light);
 }
 
-/* Dark Mode */
 body.dark {
   --bg: var(--bg-dark);
   --text: var(--text-dark);
@@ -26,7 +25,7 @@ body.dark {
   --highlight: var(--highlight-dark);
 }
 
-/* Base Layout */
+/* ========== GLOBAL ========== */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -62,6 +61,11 @@ nav a:hover {
   text-decoration: underline;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .profile-wrapper {
   margin-top: 2rem;
 }
@@ -72,10 +76,10 @@ nav a:hover {
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--highlight);
-  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Sections */
+/* ========== SECTIONS ========== */
 section {
   margin: 2rem 0;
 }
@@ -87,13 +91,22 @@ section {
   padding: 0 1rem;
 }
 
+/* 🔮 GLASSMORPHISM PROJECT CARD */
 .project-card {
-  background: var(--card-bg);
-  color: var(--text);
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: var(--text);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+body.dark .project-card {
+  background: rgba(16, 12, 8, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
@@ -113,14 +126,14 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
   }
 }
 
-/* Theme Toggle Switch – Uiverse.io */
+/* ========== TOGGLE SWITCH (Uiverse by JustCode14) ========== */
 .toggle-container {
   position: fixed;
   top: 1rem;
@@ -132,8 +145,10 @@ footer {
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 64px;
-  height: 34px;
+  width: 4em;
+  height: 2.2em;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .switch input {
@@ -149,71 +164,71 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #73C0FC;
-  transition: .4s;
+  background-color: #2a2a2a;
+  transition: 0.4s;
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 30px;
-  width: 30px;
+  height: 1.2em;
+  width: 1.2em;
   border-radius: 20px;
-  left: 2px;
-  bottom: 2px;
-  z-index: 2;
-  background-color: #e8e8e8;
-  transition: .4s;
+  left: 0.5em;
+  bottom: 0.5em;
+  transition: 0.4s;
+  transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+  box-shadow: inset 8px -4px 0px 0px #fff;
 }
 
-.sun svg {
+.switch input:checked + .slider {
+  background-color: #00a6ff;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.8em);
+  box-shadow: inset 15px -4px 0px 15px #ffcf48;
+}
+
+.star {
+  background-color: #fff;
+  border-radius: 50%;
   position: absolute;
-  top: 6px;
-  left: 36px;
-  z-index: 1;
-  width: 24px;
-  height: 24px;
+  width: 5px;
+  height: 5px;
+  transition: all 0.4s;
 }
 
-.moon svg {
-  fill: #73C0FC;
+.star_1 {
+  left: 2.5em;
+  top: 0.5em;
+}
+
+.star_2 {
+  left: 2.2em;
+  top: 1.2em;
+}
+
+.star_3 {
+  left: 3em;
+  top: 0.9em;
+}
+
+.switch input:checked ~ .slider .star {
+  opacity: 0;
+}
+
+.cloud {
+  width: 3.5em;
   position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 1;
-  width: 24px;
-  height: 24px;
+  bottom: -1.4em;
+  left: -1.1em;
+  opacity: 0;
+  transition: all 0.4s;
 }
 
-.sun svg {
-  animation: rotate 15s linear infinite;
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(360deg); }
-}
-
-.moon svg {
-  animation: tilt 5s linear infinite;
-}
-
-@keyframes tilt {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-10deg); }
-  75% { transform: rotate(10deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.input:checked + .slider {
-  background-color: #183153;
-}
-
-.input:focus + .slider {
-  box-shadow: 0 0 1px #183153;
-}
-
-.input:checked + .slider:before {
-  transform: translateX(30px);
+.switch input:checked ~ .slider .cloud {
+  opacity: 1;
 }
