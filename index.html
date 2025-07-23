@@ -3,50 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Vamshi</title>
+  <title>Vamshi Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Theme Toggle -->
-  <div class="theme-toggle-wrapper">
-    <label class="theme-switch">
-      <input type="checkbox" class="theme-switch__checkbox" id="theme-toggle">
-      <div class="theme-switch__container">
-        <div class="theme-switch__clouds"></div>
-        <div class="theme-switch__stars-container">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
-            <path fill="currentColor" d="..."/>
-          </svg>
-        </div>
-        <div class="theme-switch__circle-container">
-          <div class="theme-switch__sun-moon-container">
-            <div class="theme-switch__moon">
-              <div class="theme-switch__spot"></div>
-              <div class="theme-switch__spot"></div>
-              <div class="theme-switch__spot"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- Dark/Light Mode Toggle -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider">
+        <div class="star star_1"></div>
+        <div class="star star_2"></div>
+        <div class="star star_3"></div>
+        <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+          <path fill="#fff" d="M391.84 540.91c..."></path>
+        </svg>
+      </span>
     </label>
   </div>
 
-  <!-- Navigation -->
+  <header>
+    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
+    <h1>Nacham Vamshi Krishna</h1>
+    <p>Cybersecurity | Linux | Python | AI Voice Assistant</p>
+  </header>
+
   <nav>
-    <a href="index.html" class="btn"><i class="animation"></i>Home<i class="animation"></i></a>
-    <a href="about.html" class="btn"><i class="animation"></i>About<i class="animation"></i></a>
-    <a href="projects.html" class="btn"><i class="animation"></i>Projects<i class="animation"></i></a>
-    <a href="resume.html" class="btn"><i class="animation"></i>Resume<i class="animation"></i></a>
-    <a href="contact.html" class="btn"><i class="animation"></i>Contact<i class="animation"></i></a>
+    <a href="index.html" class="nav-btn"><i class="animation"></i>Home<i class="animation"></i></a>
+    <a href="about.html" class="nav-btn"><i class="animation"></i>About<i class="animation"></i></a>
+    <a href="projects.html" class="nav-btn"><i class="animation"></i>Projects<i class="animation"></i></a>
+    <a href="resume.html" class="nav-btn"><i class="animation"></i>Resume<i class="animation"></i></a>
+    <a href="contact.html" class="nav-btn"><i class="animation"></i>Contact<i class="animation"></i></a>
   </nav>
 
   <main>
     <section class="glass">
-      <h1>Welcome to My Portfolio</h1>
-      <p>This is the home page content.</p>
+      <h2>Welcome to my Portfolio</h2>
+      <p>This is a showcase of my work, skills, and professional journey. Feel free to explore and reach out!</p>
+    </section>
+
+    <section class="glass">
+      <h2>Featured Project</h2>
+      <p><strong>ARIA</strong> – An AI-powered Linux voice assistant using Whisper AI & Ollama.</p>
+      <a href="projects.html#aria" class="btn">
+        <i class="animation"></i>View More Projects<i class="animation"></i>
+      </a>
     </section>
   </main>
 
+  <footer>© 2025 Vamshi Krishna</footer>
   <script src="script.js"></script>
 </body>
 </html>
