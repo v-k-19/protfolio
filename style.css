@@ -1,15 +1,16 @@
+/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-/* ========== THEME COLORS ========== */
+/* Theme Variables */
 :root {
   --bg-light: #f2f2f2;
   --text-light: #111;
-  --card-light: #fff;
+  --card-light: #ffffff;
   --highlight-light: #007bff;
 
   --bg-dark: #100c08; /* smoky black */
   --text-dark: #e0e0e0;
-  --card-dark: #1a1a1a;
+  --card-dark: rgba(255, 255, 255, 0.08);
   --highlight-dark: #4dabf7;
 
   --bg: var(--bg-light);
@@ -18,6 +19,7 @@
   --highlight: var(--highlight-light);
 }
 
+/* Dark Mode Overrides */
 body.dark {
   --bg: var(--bg-dark);
   --text: var(--text-dark);
@@ -25,115 +27,21 @@ body.dark {
   --highlight: var(--highlight-dark);
 }
 
-/* ========== GLOBAL ========== */
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background 0.3s, color 0.3s;
-  scroll-behavior: smooth;
-}
-
-header, nav, section, footer {
-  padding: 1.5rem;
-  text-align: center;
-}
-
-h1, h2, h3 {
-  margin-bottom: 0.5rem;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--highlight);
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  list-style: none;
   padding: 0;
 }
 
-.profile-wrapper {
-  margin-top: 2rem;
-}
-
-.profile-pic {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--highlight);
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-}
-
-/* ========== SECTIONS ========== */
-section {
-  margin: 2rem 0;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  padding: 0 1rem;
-}
-
-/* 🔮 GLASSMORPHISM PROJECT CARD */
-.project-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg);
   color: var(--text);
-  transition: transform 0.2s ease, background 0.3s ease;
+  transition: background 0.4s, color 0.4s;
+  padding-bottom: 5rem;
 }
 
-body.dark .project-card {
-  background: rgba(16, 12, 8, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-footer {
-  padding: 2rem;
-  font-size: 0.9rem;
-  background-color: var(--card-bg);
-  color: var(--text);
-  margin-top: 2rem;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-  }
-}
-
-/* ========== TOGGLE SWITCH (Uiverse by JustCode14) ========== */
+/* Toggle Button Position */
 .toggle-container {
   position: fixed;
   top: 1rem;
@@ -141,6 +49,7 @@ footer {
   z-index: 999;
 }
 
+/* Toggle Switch Styling (JustCode14 – Uiverse) */
 .switch {
   font-size: 17px;
   position: relative;
@@ -171,15 +80,14 @@ footer {
 }
 
 .slider:before {
-  position: absolute;
   content: "";
+  position: absolute;
   height: 1.2em;
   width: 1.2em;
   border-radius: 20px;
   left: 0.5em;
   bottom: 0.5em;
   transition: 0.4s;
-  transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
   box-shadow: inset 8px -4px 0px 0px #fff;
 }
 
@@ -201,20 +109,9 @@ footer {
   transition: all 0.4s;
 }
 
-.star_1 {
-  left: 2.5em;
-  top: 0.5em;
-}
-
-.star_2 {
-  left: 2.2em;
-  top: 1.2em;
-}
-
-.star_3 {
-  left: 3em;
-  top: 0.9em;
-}
+.star_1 { left: 2.5em; top: 0.5em; }
+.star_2 { left: 2.2em; top: 1.2em; }
+.star_3 { left: 3em; top: 0.9em; }
 
 .switch input:checked ~ .slider .star {
   opacity: 0;
@@ -231,4 +128,57 @@ footer {
 
 .switch input:checked ~ .slider .cloud {
   opacity: 1;
+}
+
+/* Profile Image */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 2rem;
+  border: 3px solid var(--highlight);
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+nav a {
+  color: var(--highlight);
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+/* Sections */
+section {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.intro {
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
 }
