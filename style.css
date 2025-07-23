@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 :root {
-  --bg-light: #f2f2f2;
+  --bg-light: #f0f0f0;
   --text-light: #111;
-  --card-light: #ffffff;
+  --card-light: #ffffffcc;
   --highlight-light: #007bff;
 
   --bg-dark: #100c08;
   --text-dark: #e0e0e0;
-  --card-dark: rgba(255, 255, 255, 0.08);
+  --card-dark: #1a1a1acc;
   --highlight-dark: #4dabf7;
 
   --bg: var(--bg-light);
@@ -24,28 +24,83 @@ body.dark {
   --highlight: var(--highlight-dark);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  transition: background 0.4s, color 0.4s;
+  transition: background 0.3s, color 0.3s;
   padding-bottom: 5rem;
+  text-align: center;
 }
 
-/* Toggle Button */
+header {
+  padding: 2rem;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--highlight);
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+nav a {
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  border-bottom: 2px solid var(--highlight);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.glass {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 700px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 14px;
+}
+
+/* Toggle Switch */
 .toggle-container {
-  position: fixed;
+  position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 999;
 }
 
+/* The switch */
 .switch {
   font-size: 17px;
   position: relative;
@@ -53,7 +108,6 @@ body {
   width: 4em;
   height: 2.2em;
   border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .switch input {
@@ -65,14 +119,11 @@ body {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: #2a2a2a;
   transition: 0.4s;
   border-radius: 30px;
   overflow: hidden;
+  top: 0; left: 0; right: 0; bottom: 0;
 }
 
 .slider:before {
@@ -109,9 +160,7 @@ body {
 .star_2 { left: 2.2em; top: 1.2em; }
 .star_3 { left: 3em; top: 0.9em; }
 
-.switch input:checked ~ .slider .star {
-  opacity: 0;
-}
+.switch input:checked ~ .slider .star { opacity: 0; }
 
 .cloud {
   width: 3.5em;
@@ -122,59 +171,20 @@ body {
   transition: all 0.4s;
 }
 
-.switch input:checked ~ .slider .cloud {
-  opacity: 1;
-}
+.switch input:checked ~ .slider .cloud { opacity: 1; }
 
-/* Profile Image */
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-top: 2rem;
-  border: 3px solid var(--highlight);
-}
+@media (max-width: 600px) {
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+  }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-}
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-/* Navigation */
-nav {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-nav a {
-  color: var(--highlight);
-  text-decoration: none;
-  margin: 0 0.75rem;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--text);
-}
-
-/* Sections */
-section {
-  margin: 2rem auto;
-  max-width: 800px;
-  padding: 0 1rem;
-}
-
-.intro {
-  text-align: center;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  opacity: 0.6;
+  .glass {
+    padding: 1.2rem;
+  }
 }

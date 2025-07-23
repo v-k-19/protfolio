@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vamshi's Portfolio</title>
+  <title>Vamshi Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Dark/Light Toggle -->
+  <!-- Toggle Button -->
   <div class="toggle-container">
     <label class="switch">
       <input type="checkbox" id="theme-toggle" />
@@ -23,25 +23,36 @@
   </div>
 
   <header>
-    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic"/>
+    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
     <h1>Nacham Vamshi Krishna</h1>
-    <p>Cybersecurity | Linux | Python | Git</p>
+    <p>Cybersecurity | Linux | Python | AI Voice Assistant</p>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="resume.html">Resume</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="intro">
-    <h2>Welcome to My Portfolio</h2>
-    <p>I'm passionate about creating secure, scalable, and innovative technology.</p>
-  </section>
+  <main>
+    <section class="glass">
+      <h2>Welcome to my Portfolio</h2>
+      <p>This is a showcase of my work, skills, and professional journey. Feel free to explore and reach out!</p>
+    </section>
 
-  <footer>© 2025 Vamshi Krishna</footer>
+    <section class="glass">
+      <h2>Featured Project</h2>
+      <p><strong>ARIA</strong> – An AI-powered Linux voice assistant using Whisper AI & Ollama.</p>
+      <a href="https://github.com/v-k-19/A.R.I.A" target="_blank">View on GitHub</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Vamshi Krishna
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
