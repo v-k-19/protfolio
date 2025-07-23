@@ -1,14 +1,12 @@
-/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-/* Theme Variables */
 :root {
   --bg-light: #f2f2f2;
   --text-light: #111;
   --card-light: #ffffff;
   --highlight-light: #007bff;
 
-  --bg-dark: #100c08; /* smoky black */
+  --bg-dark: #100c08;
   --text-dark: #e0e0e0;
   --card-dark: rgba(255, 255, 255, 0.08);
   --highlight-dark: #4dabf7;
@@ -19,7 +17,6 @@
   --highlight: var(--highlight-light);
 }
 
-/* Dark Mode Overrides */
 body.dark {
   --bg: var(--bg-dark);
   --text: var(--text-dark);
@@ -41,7 +38,7 @@ body {
   padding-bottom: 5rem;
 }
 
-/* Toggle Button Position */
+/* Toggle Button */
 .toggle-container {
   position: fixed;
   top: 1rem;
@@ -49,7 +46,6 @@ body {
   z-index: 999;
 }
 
-/* Toggle Switch Styling (JustCode14 – Uiverse) */
 .switch {
   font-size: 17px;
   position: relative;
