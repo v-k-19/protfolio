@@ -1,19 +1,19 @@
-// Dark/light theme toggle with persistence
+// Dark/Light toggle with localStorage
 const toggle = document.getElementById("theme-toggle");
-const body = document.body;
 
-// Load saved theme
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark");
-  toggle.checked = true;
+function setTheme(dark) {
+  document.body.classList.toggle("dark", dark);
+  localStorage.setItem("theme", dark ? "dark" : "light");
 }
 
 toggle.addEventListener("change", () => {
-  if (toggle.checked) {
-    body.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    body.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  }
+  setTheme(toggle.checked);
+});
+
+// Set initial theme on load
+window.addEventListener("DOMContentLoaded", () => {
+  const theme = localStorage.getItem("theme");
+  const isDark = theme === "dark";
+  toggle.checked = isDark;
+  setTheme(isDark);
 });
