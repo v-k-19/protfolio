@@ -2,58 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vamshi | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vamshi Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Cube Pattern Background -->
-  <div class="pattern-bg-container">
-    <svg preserveAspectRatio="xMidYMid slice" height="100%" width="100%" class="cube-svg" viewBox="0 0 120 104">
-      <defs>
-        <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="cube-dark">
-          <stop stop-color="#232526" offset="0%"></stop>
-          <stop stop-color="#414345" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient y2="0%" x2="100%" y1="100%" x1="0%" id="cube-mid">
-          <stop stop-color="#4b6cb7" offset="0%"></stop>
-          <stop stop-color="#182848" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient y2="100%" x2="0%" y1="0%" x1="100%" id="cube-light">
-          <stop stop-color="#a8edea" offset="0%"></stop>
-          <stop stop-color="#fed6e3" offset="100%"></stop>
-        </linearGradient>
-      </defs>
-    </svg>
-  </div>
-
-  <!-- Theme Toggle -->
+  <!-- Dark/Light Mode Toggle -->
   <div class="toggle-container">
     <label class="switch">
-      <input type="checkbox" id="theme-toggle">
-      <span class="slider"></span>
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider">
+        <div class="star star_1"></div>
+        <div class="star star_2"></div>
+        <div class="star star_3"></div>
+        <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+          <path fill="#fff" d="M391.84 540.91c..."></path>
+        </svg>
+      </span>
     </label>
   </div>
 
-  <!-- Navigation -->
+  <header>
+    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
+    <h1>Nacham Vamshi Krishna</h1>
+    <p>Cybersecurity | Linux | Python | AI Voice Assistant</p>
+  </header>
+
   <nav>
-    <a href="index.html" class="btn"><i class="animation"></i>Home<i class="animation"></i></a>
-    <a href="about.html" class="btn"><i class="animation"></i>About<i class="animation"></i></a>
-    <a href="projects.html" class="btn"><i class="animation"></i>Projects<i class="animation"></i></a>
-    <a href="resume.html" class="btn"><i class="animation"></i>Resume<i class="animation"></i></a>
-    <a href="contact.html" class="btn"><i class="animation"></i>Contact<i class="animation"></i></a>
+    <a href="index.html" class="nav-btn"><i class="animation"></i>Home<i class="animation"></i></a>
+    <a href="about.html" class="nav-btn"><i class="animation"></i>About<i class="animation"></i></a>
+    <a href="projects.html" class="nav-btn"><i class="animation"></i>Projects<i class="animation"></i></a>
+    <a href="resume.html" class="nav-btn"><i class="animation"></i>Resume<i class="animation"></i></a>
+    <a href="contact.html" class="nav-btn"><i class="animation"></i>Contact<i class="animation"></i></a>
   </nav>
 
-  <!-- Hero Section -->
   <main>
     <section class="glass">
-      <h1>Hi, I’m Nacham Vamshi Krishna 👋</h1>
-      <p>Cybersecurity | Linux | AI | Full-Stack Developer</p>
-      <a href="projects.html" class="btn"><i class="animation"></i>See Projects<i class="animation"></i></a>
+      <h2>Welcome to my Portfolio</h2>
+      <p>This is a showcase of my work, skills, and professional journey. Feel free to explore and reach out!</p>
+    </section>
+
+    <section class="glass">
+      <h2>Featured Project</h2>
+      <p><strong>ARIA</strong> – An AI-powered Linux voice assistant using Whisper AI & Ollama.</p>
+      <a href="projects.html#aria" class="btn">
+        <i class="animation"></i>View More Projects<i class="animation"></i>
+      </a>
     </section>
   </main>
 
+  <footer>© 2025 Vamshi Krishna</footer>
   <script src="script.js"></script>
 </body>
 </html>
