@@ -3,45 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects - Vamshi</title>
+  <title>Projects | Vamshi</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- SVG Cube Background -->
+  <div class="pattern-bg-container">
+    <svg preserveAspectRatio="xMidYMid slice" height="100%" width="100%" class="cube-svg" viewBox="0 0 120 104">
+      <defs>
+        <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="cube-dark">
+          <stop stop-color="#232526" offset="0%"></stop>
+          <stop stop-color="#414345" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient y2="0%" x2="100%" y1="100%" x1="0%" id="cube-mid">
+          <stop stop-color="#4b6cb7" offset="0%"></stop>
+          <stop stop-color="#182848" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient y2="100%" x2="0%" y1="0%" x1="100%" id="cube-light">
+          <stop stop-color="#a8edea" offset="0%"></stop>
+          <stop stop-color="#fed6e3" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Theme Toggle -->
   <div class="toggle-container">
     <label class="switch">
       <input type="checkbox" id="theme-toggle">
-      <span class="slider">
-        <div class="star star_1"></div>
-        <div class="star star_2"></div>
-        <div class="star star_3"></div>
-        <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-          <path fill="#fff" d="M391.84 540.91c..."></path>
-        </svg>
-      </span>
+      <span class="slider"></span>
     </label>
   </div>
 
+  <!-- Navigation -->
   <nav>
-    <a href="index.html" class="nav-btn"><i class="animation"></i>Home<i class="animation"></i></a>
-    <a href="about.html" class="nav-btn"><i class="animation"></i>About<i class="animation"></i></a>
-    <a href="projects.html" class="nav-btn"><i class="animation"></i>Projects<i class="animation"></i></a>
-    <a href="resume.html" class="nav-btn"><i class="animation"></i>Resume<i class="animation"></i></a>
-    <a href="contact.html" class="nav-btn"><i class="animation"></i>Contact<i class="animation"></i></a>
+    <a href="index.html" class="btn"><i class="animation"></i>Home<i class="animation"></i></a>
+    <a href="about.html" class="btn"><i class="animation"></i>About<i class="animation"></i></a>
+    <a href="projects.html" class="btn"><i class="animation"></i>Projects<i class="animation"></i></a>
+    <a href="resume.html" class="btn"><i class="animation"></i>Resume<i class="animation"></i></a>
+    <a href="contact.html" class="btn"><i class="animation"></i>Contact<i class="animation"></i></a>
   </nav>
 
+  <!-- Projects Section -->
   <main>
     <section class="glass">
       <h1>Projects</h1>
-      <div id="aria">
-        <h3>ARIA – Linux Voice Assistant</h3>
-        <p>Built with Whisper AI and Ollama to recognize speech, interpret natural language, and interact with system APIs.</p>
-        <a href="https://github.com/v-k-19/A.R.I.A" class="btn"><i class="animation"></i>GitHub Repo<i class="animation"></i></a>
+
+      <div class="project-list">
+        <div class="project-card">
+          <h3>🌐 A.R.I.A. – AI Linux Assistant</h3>
+          <p>Voice-powered AI assistant for Linux with Whisper, PyQt GUI, and offline response using Ollama LLM.</p>
+          <a class="btn" href="https://github.com/v-k-19/A.R.I.A" target="_blank">
+            <i class="animation"></i>View on GitHub<i class="animation"></i>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <h3>📱 FitPulse – Flutter Fitness App</h3>
+          <p>BLE-connected fitness app with Firebase login and activity tracking. Built with Flutter for Android.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>💻 Portfolio Website</h3>
+          <p>Personal portfolio with dark/light toggle, animated SVG backgrounds, and ripple UI effects using HTML, CSS, JS.</p>
+        </div>
       </div>
-      <!-- Add more projects as needed -->
     </section>
   </main>
 
-  <footer>© 2025 Vamshi Krishna</footer>
   <script src="script.js"></script>
 </body>
 </html>

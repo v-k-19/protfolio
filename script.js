@@ -1,19 +1,21 @@
-// Dark/Light toggle with localStorage
 const toggle = document.getElementById("theme-toggle");
 
-function setTheme(dark) {
-  document.body.classList.toggle("dark", dark);
-  localStorage.setItem("theme", dark ? "dark" : "light");
+// Apply theme from localStorage
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+} else {
+  document.body.classList.add("light");
 }
 
-toggle.addEventListener("change", () => {
-  setTheme(toggle.checked);
-});
+// Toggle logic
+toggle.checked = localStorage.getItem("theme") === "dark";
 
-// Set initial theme on load
-window.addEventListener("DOMContentLoaded", () => {
-  const theme = localStorage.getItem("theme");
-  const isDark = theme === "dark";
-  toggle.checked = isDark;
-  setTheme(isDark);
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    document.body.classList.replace("light", "dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.body.classList.replace("dark", "light");
+    localStorage.setItem("theme", "light");
+  }
 });

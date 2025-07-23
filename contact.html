@@ -3,42 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Vamshi</title>
+  <title>Contact | Vamshi</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Background -->
+  <div class="pattern-bg-container">
+    <svg preserveAspectRatio="xMidYMid slice" height="100%" width="100%" class="cube-svg" viewBox="0 0 120 104">
+      <defs>
+        <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="cube-dark">
+          <stop stop-color="#232526" offset="0%"></stop>
+          <stop stop-color="#414345" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient y2="0%" x2="100%" y1="100%" x1="0%" id="cube-mid">
+          <stop stop-color="#4b6cb7" offset="0%"></stop>
+          <stop stop-color="#182848" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient y2="100%" x2="0%" y1="0%" x1="100%" id="cube-light">
+          <stop stop-color="#a8edea" offset="0%"></stop>
+          <stop stop-color="#fed6e3" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Theme Toggle -->
   <div class="toggle-container">
     <label class="switch">
       <input type="checkbox" id="theme-toggle">
-      <span class="slider">
-        <div class="star star_1"></div>
-        <div class="star star_2"></div>
-        <div class="star star_3"></div>
-        <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-          <path fill="#fff" d="M391.84 540.91c..."></path>
-        </svg>
-      </span>
+      <span class="slider"></span>
     </label>
   </div>
 
+  <!-- Navigation -->
   <nav>
-    <a href="index.html" class="nav-btn"><i class="animation"></i>Home<i class="animation"></i></a>
-    <a href="about.html" class="nav-btn"><i class="animation"></i>About<i class="animation"></i></a>
-    <a href="projects.html" class="nav-btn"><i class="animation"></i>Projects<i class="animation"></i></a>
-    <a href="resume.html" class="nav-btn"><i class="animation"></i>Resume<i class="animation"></i></a>
-    <a href="contact.html" class="nav-btn"><i class="animation"></i>Contact<i class="animation"></i></a>
+    <a href="index.html" class="btn"><i class="animation"></i>Home<i class="animation"></i></a>
+    <a href="about.html" class="btn"><i class="animation"></i>About<i class="animation"></i></a>
+    <a href="projects.html" class="btn"><i class="animation"></i>Projects<i class="animation"></i></a>
+    <a href="resume.html" class="btn"><i class="animation"></i>Resume<i class="animation"></i></a>
+    <a href="contact.html" class="btn"><i class="animation"></i>Contact<i class="animation"></i></a>
   </nav>
 
+  <!-- Contact Section -->
   <main>
     <section class="glass">
       <h1>Contact Me</h1>
-      <p>Email: <a href="mailto:nachamvamshikrishna@gmail.com">nachamvamshikrishna@gmail.com</a></p>
-      <p>Phone: +91 9542880519</p>
-      <p>Location: Secunderabad, Hyderabad, Telangana</p>
+      <p>Feel free to reach out via email or social media.</p>
+
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:nachamvamshikrishna@gmail.com">nachamvamshikrishna@gmail.com</a></li>
+        <li><strong>Phone:</strong> +91 9542880519</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/v-k-19" target="_blank">github.com/v-k-19</a></li>
+      </ul>
+
+      <a class="btn" href="mailto:nachamvamshikrishna@gmail.com">
+        <i class="animation"></i>Email Me<i class="animation"></i>
+      </a>
     </section>
   </main>
 
-  <footer>© 2025 Vamshi Krishna</footer>
   <script src="script.js"></script>
 </body>
 </html>
