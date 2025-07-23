@@ -7,16 +7,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Theme Toggle -->
   <div class="toggle-container">
-    <label class="switch">
+    <label class="theme-switch">
       <input type="checkbox" id="theme-toggle" />
-      <span class="slider"></span>
+      <div class="theme-switch__container">
+        <div class="theme-switch__clouds"></div>
+        <div class="theme-switch__stars-container"></div>
+        <div class="theme-switch__circle-container">
+          <div class="theme-switch__sun-moon-container">
+            <div class="theme-switch__moon">
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </label>
   </div>
 
-  <!-- Navigation -->
   <nav>
     <a href="index.html" class="btn"><i class="animation"></i>Home<i class="animation"></i></a>
     <a href="about.html" class="btn"><i class="animation"></i>About<i class="animation"></i></a>
@@ -25,14 +34,13 @@
     <a href="contact.html" class="btn"><i class="animation"></i>Contact<i class="animation"></i></a>
   </nav>
 
-  <!-- Projects Section -->
   <main>
     <section class="glass">
       <h1>Projects</h1>
       <ul>
-        <li><strong>ARIA - AI Voice Assistant</strong> — Full-stack AI assistant for Linux using Whisper and Ollama <a href="https://github.com/v-k-19/A.R.I.A" target="_blank">[GitHub]</a></li>
-        <li><strong>NoiseFit Clone</strong> — Fitness tracker with BLE integration in Flutter</li>
-        <li><strong>Portfolio Site</strong> — This site itself with dark/light mode, SVG animation, and ripple buttons</li>
+        <li><strong>ARIA - AI Voice Assistant</strong> – AI-powered Linux personal assistant using Whisper + Ollama.</li>
+        <li><strong>Fitness Tracker App</strong> – Flutter app with Firebase auth and BLE heart rate sensor support.</li>
+        <li><strong>Linux Package Manager</strong> – Custom binary-based manager for a unique Linux distro.</li>
       </ul>
     </section>
   </main>
