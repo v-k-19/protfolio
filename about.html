@@ -3,40 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Vamshi</title>
+  <title>About | Vamshi</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="toggle-container">
-    <label class="switch">
-      <input type="checkbox" id="theme-toggle">
-      <span class="slider">
-        <div class="star star_1"></div>
-        <div class="star star_2"></div>
-        <div class="star star_3"></div>
-        <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-          <path fill="#fff" d="M391.84 540.91c..."></path>
-        </svg>
-      </span>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle-wrapper">
+    <label class="theme-switch">
+      <input type="checkbox" class="theme-switch__checkbox" id="theme-toggle" />
+      <div class="theme-switch__container">
+        <div class="theme-switch__clouds"></div>
+        <div class="theme-switch__stars-container">
+          <!-- SVG Stars omitted for brevity -->
+        </div>
+        <div class="theme-switch__circle-container">
+          <div class="theme-switch__sun-moon-container">
+            <div class="theme-switch__moon">
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </label>
   </div>
 
+  <!-- Navigation -->
   <nav>
-    <a href="index.html" class="nav-btn"><i class="animation"></i>Home<i class="animation"></i></a>
-    <a href="about.html" class="nav-btn"><i class="animation"></i>About<i class="animation"></i></a>
-    <a href="projects.html" class="nav-btn"><i class="animation"></i>Projects<i class="animation"></i></a>
-    <a href="resume.html" class="nav-btn"><i class="animation"></i>Resume<i class="animation"></i></a>
-    <a href="contact.html" class="nav-btn"><i class="animation"></i>Contact<i class="animation"></i></a>
+    <a href="index.html" class="btn"><i class="animation"></i>Home<i class="animation"></i></a>
+    <a href="about.html" class="btn"><i class="animation"></i>About<i class="animation"></i></a>
+    <a href="projects.html" class="btn"><i class="animation"></i>Projects<i class="animation"></i></a>
+    <a href="resume.html" class="btn"><i class="animation"></i>Resume<i class="animation"></i></a>
+    <a href="contact.html" class="btn"><i class="animation"></i>Contact<i class="animation"></i></a>
   </nav>
 
+  <!-- About Section -->
   <main>
     <section class="glass">
       <h1>About Me</h1>
-      <p>Hi, I'm Nacham Vamshi Krishna, a passionate developer with a focus on cybersecurity, Linux systems, and AI development. I enjoy building smart tools and interfaces that combine tech and creativity.</p>
+      <p>I'm Nacham Vamshi Krishna, a Computer Science student passionate about Linux, Cybersecurity, and building AI-powered tools like ARIA – my voice assistant for Linux.</p>
+      <p>I love open source, building unique UIs, and combining security with creativity.</p>
     </section>
   </main>
 
-  <footer>© 2025 Vamshi Krishna</footer>
   <script src="script.js"></script>
 </body>
 </html>
