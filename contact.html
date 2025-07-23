@@ -8,12 +8,7 @@
 </head>
 <body>
 
-  <div class="pattern-bg-container">
-    <svg preserveAspectRatio="xMidYMid slice" height="100%" width="100%" class="cube-svg" viewBox="0 0 120 104">
-      <!-- same gradient defs as index.html -->
-    </svg>
-  </div>
-
+  <!-- Theme Toggle -->
   <div class="toggle-container">
     <label class="switch">
       <input type="checkbox" id="theme-toggle" />
@@ -21,6 +16,7 @@
     </label>
   </div>
 
+  <!-- Navigation -->
   <nav>
     <a href="index.html" class="btn"><i class="animation"></i>Home<i class="animation"></i></a>
     <a href="about.html" class="btn"><i class="animation"></i>About<i class="animation"></i></a>
@@ -29,15 +25,21 @@
     <a href="contact.html" class="btn"><i class="animation"></i>Contact<i class="animation"></i></a>
   </nav>
 
+  <!-- Contact Section -->
   <main>
     <section class="glass">
-      <h1>Contact Me</h1>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button class="btn" type="submit"><i class="animation"></i>Send<i class="animation"></i></button>
-      </form>
+      <div class="profile-container">
+        <div class="profile-badge">
+          <img src="assets/profile.jpg" alt="Profile Picture" class="profile-img" />
+        </div>
+        <h1>Contact Me</h1>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button class="btn" type="submit"><i class="animation"></i>Send Message<i class="animation"></i></button>
+        </form>
+      </div>
     </section>
   </main>
 
