@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+/* Root Theme Variables */
 :root {
   --bg-light: #f2f2f2;
   --text-light: #111;
@@ -17,6 +18,7 @@
   --highlight: var(--highlight-light);
 }
 
+/* Dark Mode */
 body.dark {
   --bg: var(--bg-dark);
   --text: var(--text-dark);
@@ -24,80 +26,101 @@ body.dark {
   --highlight: var(--highlight-dark);
 }
 
-* {
-  box-sizing: border-box;
-}
-
+/* Base Layout */
 body {
-  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  margin: 0;
-  padding-bottom: 5rem;
   transition: background 0.3s, color 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  scroll-behavior: smooth;
+}
+
+header, nav, section, footer {
+  padding: 1.5rem;
   text-align: center;
 }
 
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 nav a {
-  margin: 0 1rem;
-  color: var(--highlight);
   text-decoration: none;
+  color: var(--highlight);
   font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.profile-wrapper {
+  margin-top: 2rem;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--highlight);
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+/* Sections */
+section {
+  margin: 2rem 0;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  max-width: 900px;
+  padding: 0 1rem;
 }
 
 .project-card {
-  background-color: var(--card-bg);
-  border-radius: 1rem;
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .project-card img {
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 8px;
 }
 
 footer {
-  padding: 1rem;
-  font-size: 0.875rem;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background-color: var(--card-bg);
+  color: var(--text);
+  margin-top: 2rem;
 }
 
-.profile-wrapper {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  padding: 5px;
-  background: linear-gradient(135deg, #4dabf7, #007bff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5rem auto;
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
 }
 
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #fff;
-}
-
-/* Toggle Styling */
+/* Theme Toggle Switch – Uiverse.io */
 .toggle-container {
   position: fixed;
   top: 1rem;
@@ -105,37 +128,92 @@ footer {
   z-index: 999;
 }
 
-.checkbox {
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
   opacity: 0;
-  position: absolute;
+  width: 0;
+  height: 0;
 }
 
-.checkbox-label {
-  background-color: #111;
-  width: 50px;
-  height: 26px;
-  border-radius: 50px;
-  padding: 5px;
+.slider {
+  position: absolute;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
 }
 
-.fa-moon { color: #f1c40f; }
-.fa-sun { color: #f39c12; }
-
-.checkbox-label .ball {
-  background-color: #fff;
-  width: 22px;
-  height: 22px;
+.slider:before {
   position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
   left: 2px;
-  top: 2px;
-  border-radius: 50%;
-  transition: transform 0.2s linear;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
 }
 
-.checkbox:checked + .checkbox-label .ball {
-  transform: translateX(24px);
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
 }
