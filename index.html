@@ -7,16 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Toggle Switch -->
+  <!-- Dark/Light Toggle -->
   <div class="toggle-container">
     <label class="theme-switch">
-      <input type="checkbox" id="theme-toggle">
+      <input type="checkbox" id="theme-toggle" />
       <div class="theme-switch__container">
         <div class="theme-switch__clouds"></div>
-        <div class="theme-switch__stars-container">
-          <!-- stars svg omitted for brevity -->
-        </div>
+        <div class="theme-switch__stars-container"></div>
         <div class="theme-switch__circle-container">
           <div class="theme-switch__sun-moon-container">
             <div class="theme-switch__moon">
@@ -30,6 +27,13 @@
     </label>
   </div>
 
+  <!-- Profile Badge (Top Center) -->
+  <div class="profile-center-container">
+    <div class="profile-badge">
+      <img src="assets/profile.jpg" alt="Profile Picture" class="profile-img" />
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav>
     <a href="index.html" class="btn"><i class="animation"></i>Home<i class="animation"></i></a>
@@ -39,15 +43,15 @@
     <a href="contact.html" class="btn"><i class="animation"></i>Contact<i class="animation"></i></a>
   </nav>
 
-  <!-- Profile Badge -->
-  <div class="profile-badge">
-    <img src="assets/profile.jpg" alt="Vamshi" class="profile-img">
-  </div>
-
+  <!-- Hero Section -->
   <main>
     <section class="glass">
-      <h1>Welcome to My Portfolio</h1>
-      <p>I’m Vamshi Krishna, a Cybersecurity and AI enthusiast!</p>
+      <h1>Hello, I'm <span class="highlight">Vamshi Krishna</span></h1>
+      <p>
+        I'm a Computer Science student specializing in <strong>Cybersecurity, IoT, and Blockchain</strong>. 
+        I’m passionate about Linux, AI, and full-stack development.
+      </p>
+      <a href="projects.html" class="btn"><i class="animation"></i>View My Projects<i class="animation"></i></a>
     </section>
   </main>
 
