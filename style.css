@@ -29,7 +29,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background 0.3s, color 0.3s;
   padding-bottom: 5rem;
   text-align: center;
 }
@@ -37,7 +37,6 @@ body {
 /* Header */
 header {
   margin-top: 2rem;
-  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .profile-pic {
   width: 128px;
@@ -48,42 +47,17 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Navigation */
+/* Navigation Buttons */
 nav {
   margin: 2rem 0;
 }
-.nav-btn {
-  outline: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #40B3A2;
-  min-width: 120px;
-  margin: 0 6px;
-  border: 0;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
-  padding: 10px 16px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  overflow: hidden;
-  cursor: pointer;
-  text-decoration: none;
-  position: relative;
-  transition: background 0.2s, box-shadow 0.5s ease;
-}
-.nav-btn:hover {
-  opacity: .95;
-  background: #2f958b;
-}
+
+/* Ripple animation on .animation */
 .nav-btn .animation {
   border-radius: 100%;
   animation: ripple 0.6s linear infinite;
 }
 
-/* Ripple Animation */
 @keyframes ripple {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
@@ -99,7 +73,7 @@ nav {
   }
 }
 
-/* Glassmorphism Cards */
+/* Glass Section */
 .glass {
   background: var(--card-bg);
   backdrop-filter: blur(10px);
@@ -109,24 +83,21 @@ nav {
   border-radius: 1rem;
   max-width: 600px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
 }
 
 /* Footer */
 footer {
   margin-top: 3rem;
   font-size: 0.9rem;
-  transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-/* Toggle Position */
+/* Dark/Light Toggle */
 .toggle-container {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-/* Custom Toggle Switch (from Uiverse.io by JustCode14) */
 .switch {
   font-size: 17px;
   position: relative;
@@ -136,13 +107,11 @@ footer {
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -155,7 +124,6 @@ footer {
   border-radius: 30px;
   overflow: hidden;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -164,20 +132,16 @@ footer {
   border-radius: 20px;
   left: 0.5em;
   bottom: 0.5em;
-  transition: 0.4s;
-  transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+  transition: 0.4s cubic-bezier(0.81, -0.04, 0.38, 1.5);
   box-shadow: inset 8px -4px 0px 0px #fff;
 }
-
 .switch input:checked + .slider {
   background-color: #00a6ff;
 }
-
 .switch input:checked + .slider:before {
   transform: translateX(1.8em);
   box-shadow: inset 15px -4px 0px 15px #ffcf48;
 }
-
 .star {
   background-color: #fff;
   border-radius: 50%;
@@ -189,7 +153,6 @@ footer {
 .star_1 { left: 2.5em; top: 0.5em; }
 .star_2 { left: 2.2em; top: 1.2em; }
 .star_3 { left: 3em; top: 0.9em; }
-
 .switch input:checked ~ .slider .star {
   opacity: 0;
 }
@@ -205,7 +168,10 @@ footer {
   opacity: 1;
 }
 
-/* Uiverse.io Button Animation for .btn and .nav-btn */
+/* ===================== */
+/* === ANIMATED BUTTON === */
+/* ===================== */
+
 .btn, .nav-btn {
   width: 140px;
   height: 50px;
@@ -237,20 +203,116 @@ footer {
   font-weight: bold;
 }
 
-.btn-text-one, .nav-btn-text-one {
+.btn-text-one, .nav-btn-text-one { top: 50%; }
+.btn-text-two, .nav-btn-text-two { top: 150%; }
+
+.btn:hover .btn-text-one, .nav-btn:hover .nav-btn-text-one { top: -100%; }
+.btn:hover .btn-text-two, .nav-btn:hover .nav-btn-text-two { top: 50%; }
+
+/* =========================== */
+/* === PROFILE CARD STYLES === */
+/* =========================== */
+
+.profile-card-section {
+  position: absolute;
   top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
 }
 
-.btn-text-two, .nav-btn-text-two {
-  top: 150%;
+.card.profile-card {
+  width: 320px;
+  height: 420px;
+  background: var(--card-bg, #fff);
+  color: var(--card-text, #1e293b);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.btn:hover .btn-text-one,
-.nav-btn:hover .nav-btn-text-one {
-  top: -100%;
+.card__profile-pic {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--card-accent, #7c3aed);
+  margin: 0 auto 1rem;
+  transition: transform 0.4s ease;
+}
+.card__profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card:hover .card__profile-pic {
+  transform: scale(1.05);
 }
 
-.btn:hover .btn-text-two,
-.nav-btn:hover .nav-btn-text-two {
-  top: 50%;
+.card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #10b981;
+  color: white;
+  padding: 0.25em 0.5em;
+  border-radius: 999px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.card__content {
+  padding: 1.25em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  height: 100%;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.card__title {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.card__description {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card__price {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.card__button {
+  width: 28px;
+  height: 28px;
+  background: var(--card-accent, #7c3aed);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark .card.profile-card {
+  --card-bg: #1a1a1a;
+  --card-text: #f1f1f1;
 }
