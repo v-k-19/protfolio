@@ -1,3 +1,4 @@
+// Wait for DOM content to be fully loaded
 window.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("theme-toggle");
 
@@ -8,12 +9,15 @@ window.addEventListener("DOMContentLoaded", () => {
     toggle.checked = true;
   }
 
-  // Toggle dark/light mode and save preference
+  // Add smooth animation on theme toggle
+  document.body.style.transition = "background-color 0.5s ease, color 0.5s ease";
+
+  // Toggle dark/light mode on switch
   toggle.addEventListener("change", () => {
     document.body.classList.toggle("dark");
 
-    // Save to localStorage
-    const currentTheme = document.body.classList.contains("dark") ? "dark" : "light";
-    localStorage.setItem("theme", currentTheme);
+    // Save current theme to localStorage
+    const newTheme = document.body.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
   });
 });

@@ -204,3 +204,53 @@ footer {
 .switch input:checked ~ .slider .cloud {
   opacity: 1;
 }
+
+/* Uiverse.io Button Animation for .btn and .nav-btn */
+.btn, .nav-btn {
+  width: 140px;
+  height: 50px;
+  background: linear-gradient(to top, #00154c, #12376e, #23487f);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn span, .nav-btn span {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: top 0.5s;
+  font-weight: bold;
+}
+
+.btn-text-one, .nav-btn-text-one {
+  top: 50%;
+}
+
+.btn-text-two, .nav-btn-text-two {
+  top: 150%;
+}
+
+.btn:hover .btn-text-one,
+.nav-btn:hover .nav-btn-text-one {
+  top: -100%;
+}
+
+.btn:hover .btn-text-two,
+.nav-btn:hover .nav-btn-text-two {
+  top: 50%;
+}
