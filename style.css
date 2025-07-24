@@ -38,6 +38,7 @@ body {
 header {
   margin-top: 2rem;
 }
+
 .profile-pic {
   width: 128px;
   height: 128px;
@@ -47,12 +48,7 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Navigation Buttons */
-nav {
-  margin: 2rem 0;
-}
-
-/* Ripple animation on .animation */
+/* Ripple animation for nav buttons */
 .nav-btn .animation {
   border-radius: 100%;
   animation: ripple 0.6s linear infinite;
@@ -73,7 +69,12 @@ nav {
   }
 }
 
-/* Glass Section */
+/* Navigation */
+nav {
+  margin: 2rem 0;
+}
+
+/* Glass container */
 .glass {
   background: var(--card-bg);
   backdrop-filter: blur(10px);
@@ -91,7 +92,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Dark/Light Toggle */
+/* Theme Toggle Switch (from Uiverse - Galahhad) */
 .toggle-container {
   position: absolute;
   top: 10px;
@@ -168,10 +169,7 @@ footer {
   opacity: 1;
 }
 
-/* ===================== */
-/* === ANIMATED BUTTON === */
-/* ===================== */
-
+/* Animated buttons (Uiverse - mobinkakei) */
 .btn, .nav-btn {
   width: 140px;
   height: 50px;
@@ -209,10 +207,7 @@ footer {
 .btn:hover .btn-text-one, .nav-btn:hover .nav-btn-text-one { top: -100%; }
 .btn:hover .btn-text-two, .nav-btn:hover .nav-btn-text-two { top: 50%; }
 
-/* =========================== */
-/* === PROFILE CARD STYLES === */
-/* =========================== */
-
+/* Profile Card (left center) */
 .profile-card-section {
   position: absolute;
   top: 50%;
@@ -221,8 +216,8 @@ footer {
 }
 
 .card.profile-card {
-  width: 320px;
-  height: 420px;
+  width: 260px;       /* reduced width */
+  height: 480px;      /* increased height */
   background: var(--card-bg, #fff);
   color: var(--card-text, #1e293b);
   border-radius: 20px;
@@ -242,11 +237,13 @@ footer {
   margin: 0 auto 1rem;
   transition: transform 0.4s ease;
 }
+
 .card__profile-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .card:hover .card__profile-pic {
   transform: scale(1.05);
 }
@@ -264,10 +261,10 @@ footer {
 }
 
 .card__content {
-  padding: 1.25em;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75em;
+  gap: 1rem;
   height: 100%;
 }
 
