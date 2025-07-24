@@ -3,62 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects - Vamshi</title>
+  <title>Projects – Nacham Vamshi Krishna</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Theme Toggle -->
   <div class="toggle-container">
     <label class="switch">
-      <input type="checkbox" id="theme-toggle">
+      <input type="checkbox" id="theme-toggle" />
       <span class="slider">
-        <div class="star star_1"></div>
-        <div class="star star_2"></div>
-        <div class="star star_3"></div>
-        <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-          <path fill="#fff" d="M391.84 540.91c..."></path>
-        </svg>
+        <span class="star star_1"></span>
+        <span class="star star_2"></span>
+        <span class="star star_3"></span>
       </span>
     </label>
   </div>
 
-  <nav>
-    <a href="index.html" class="nav-btn">
-      <span class="nav-btn-text-one">Home</span>
-      <span class="nav-btn-text-two">Welcome</span>
-    </a>
-    <a href="about.html" class="nav-btn">
-      <span class="nav-btn-text-one">About</span>
-      <span class="nav-btn-text-two">Me</span>
-    </a>
-    <a href="projects.html" class="nav-btn">
-      <span class="nav-btn-text-one">Projects</span>
-      <span class="nav-btn-text-two">Work</span>
-    </a>
-    <a href="resume.html" class="nav-btn">
-      <span class="nav-btn-text-one">Resume</span>
-      <span class="nav-btn-text-two">Download</span>
-    </a>
-    <a href="contact.html" class="nav-btn">
-      <span class="nav-btn-text-one">Contact</span>
-      <span class="nav-btn-text-two">Let's Talk</span>
-    </a>
-  </nav>
-
-  <main>
-    <section class="glass">
-      <h1>Projects</h1>
-      <div id="aria">
-        <h3>ARIA – Linux Voice Assistant</h3>
-        <p>Built with Whisper AI and Ollama to recognize speech, interpret natural language, and interact with system APIs.</p>
-        <a href="https://github.com/v-k-19/A.R.I.A" class="btn">
-          <span class="btn-text-one">GitHub</span>
-          <span class="btn-text-two">Repo</span>
-        </a>
+  <!-- Profile Card -->
+  <div class="profile-card-section">
+    <div class="card profile-card">
+      <div class="card__content">
+        <div class="card__image" style="--bg-color: #a78bfa"></div>
+        <div class="card__text">
+          <p class="card__title">Nacham Vamshi Krishna</p>
+          <p class="card__description">Cybersecurity • Developer</p>
+        </div>
+        <div class="card__footer">
+          <div class="card__price">Student | B.E. CSE</div>
+          <div class="card__button">
+            <svg height="16" width="16" viewBox="0 0 24 24">
+              <path stroke-width="2" stroke="currentColor" d="M4 12H20M12 4V20" fill="currentColor"></path>
+            </svg>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
-  <footer>© 2025 Vamshi Krishna</footer>
+  <!-- Secondary Card -->
+  <div class="secondary-card-section">
+    <div class="card secondary-card">
+      <div class="nav-inside">
+        <a href="index.html" class="nav-btn"><span class="nav-btn-text-one">Home</span><span class="nav-btn-text-two">Home</span></a>
+        <a href="about.html" class="nav-btn"><span class="nav-btn-text-one">About</span><span class="nav-btn-text-two">About</span></a>
+        <a href="projects.html" class="nav-btn"><span class="nav-btn-text-one">Projects</span><span class="nav-btn-text-two">Projects</span></a>
+        <a href="resume.html" class="nav-btn"><span class="nav-btn-text-one">Resume</span><span class="nav-btn-text-two">Resume</span></a>
+        <a href="contact.html" class="nav-btn"><span class="nav-btn-text-one">Contact</span><span class="nav-btn-text-two">Contact</span></a>
+      </div>
+
+      <div class="card__content">
+        <div class="card__text">
+          <p class="card__title">Projects</p>
+          <p class="card__description">
+            • <strong>ARIA</strong> – AI Voice Assistant for Linux<br>
+            • <strong>NoiseFit Clone</strong> – Fitness App using Flutter + Firebase<br>
+            • <strong>Custom Package Manager</strong> – Built from scratch for Linux OS<br>
+            • <strong>Icon Theme Generator</strong> – Inspired by Adwaita, colorful and circular<br>
+            • <strong>Cybersecurity Dashboard</strong> – Monitoring tools for Linux systems
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Nacham Vamshi Krishna</footer>
   <script src="script.js"></script>
 </body>
 </html>

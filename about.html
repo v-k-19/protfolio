@@ -3,55 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Vamshi</title>
+  <title>About – Nacham Vamshi Krishna</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Theme Toggle -->
   <div class="toggle-container">
     <label class="switch">
-      <input type="checkbox" id="theme-toggle">
+      <input type="checkbox" id="theme-toggle" />
       <span class="slider">
-        <div class="star star_1"></div>
-        <div class="star star_2"></div>
-        <div class="star star_3"></div>
-        <svg viewBox="0 0 16 16" class="cloud_1 cloud">
-          <path fill="#fff" d="M391.84 540.91c..."></path>
-        </svg>
+        <span class="star star_1"></span>
+        <span class="star star_2"></span>
+        <span class="star star_3"></span>
       </span>
     </label>
   </div>
 
-  <nav>
-    <a href="index.html" class="nav-btn">
-      <span class="nav-btn-text-one">Home</span>
-      <span class="nav-btn-text-two">Welcome</span>
-    </a>
-    <a href="about.html" class="nav-btn">
-      <span class="nav-btn-text-one">About</span>
-      <span class="nav-btn-text-two">Me</span>
-    </a>
-    <a href="projects.html" class="nav-btn">
-      <span class="nav-btn-text-one">Projects</span>
-      <span class="nav-btn-text-two">Work</span>
-    </a>
-    <a href="resume.html" class="nav-btn">
-      <span class="nav-btn-text-one">Resume</span>
-      <span class="nav-btn-text-two">Download</span>
-    </a>
-    <a href="contact.html" class="nav-btn">
-      <span class="nav-btn-text-one">Contact</span>
-      <span class="nav-btn-text-two">Let's Talk</span>
-    </a>
-  </nav>
+  <!-- Profile Card -->
+  <div class="profile-card-section">
+    <div class="card profile-card">
+      <div class="card__content">
+        <div class="card__image" style="--bg-color: #a78bfa"></div>
+        <div class="card__text">
+          <p class="card__title">Nacham Vamshi Krishna</p>
+          <p class="card__description">Cybersecurity • Developer</p>
+        </div>
+        <div class="card__footer">
+          <div class="card__price">Student | B.E. CSE</div>
+          <div class="card__button">
+            <svg height="16" width="16" viewBox="0 0 24 24">
+              <path stroke-width="2" stroke="currentColor" d="M4 12H20M12 4V20" fill="currentColor"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <main>
-    <section class="glass">
-      <h1>About Me</h1>
-      <p>Hi, I'm Nacham Vamshi Krishna, a passionate developer with a focus on cybersecurity, Linux systems, and AI development. I enjoy building smart tools and interfaces that combine tech and creativity.</p>
-    </section>
-  </main>
+  <!-- Secondary Card -->
+  <div class="secondary-card-section">
+    <div class="card secondary-card">
 
-  <footer>© 2025 Vamshi Krishna</footer>
+      <!-- Navigation inside card -->
+      <div class="nav-inside">
+        <a href="index.html" class="nav-btn">
+          <span class="nav-btn-text-one">Home</span>
+          <span class="nav-btn-text-two">Home</span>
+        </a>
+        <a href="about.html" class="nav-btn">
+          <span class="nav-btn-text-one">About</span>
+          <span class="nav-btn-text-two">About</span>
+        </a>
+        <a href="projects.html" class="nav-btn">
+          <span class="nav-btn-text-one">Projects</span>
+          <span class="nav-btn-text-two">Projects</span>
+        </a>
+        <a href="resume.html" class="nav-btn">
+          <span class="nav-btn-text-one">Resume</span>
+          <span class="nav-btn-text-two">Resume</span>
+        </a>
+        <a href="contact.html" class="nav-btn">
+          <span class="nav-btn-text-one">Contact</span>
+          <span class="nav-btn-text-two">Contact</span>
+        </a>
+      </div>
+
+      <div class="card__content">
+        <div class="card__text">
+          <p class="card__title">About Me</p>
+          <p class="card__description">
+            I'm a B.E. Computer Science student focused on Cybersecurity, Linux systems, and AI technologies. I enjoy building intelligent systems and secure applications.
+            <br><br>
+            🔒 Passionate about security<br>
+            💻 Fluent in Linux and Python<br>
+            ⚙️ Developer of ARIA, an AI voice assistant for Linux<br>
+            🌐 Skilled in web and app development (React, Flutter)<br>
+            🎓 Currently studying at NSAKECET, Osmania University
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>© 2025 Nacham Vamshi Krishna</footer>
   <script src="script.js"></script>
 </body>
 </html>
