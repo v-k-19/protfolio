@@ -34,21 +34,7 @@ body {
   text-align: center;
 }
 
-/* Header */
-header {
-  margin-top: 2rem;
-}
-
-.profile-pic {
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  border: 5px solid var(--highlight);
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-/* Ripple animation for nav buttons */
+/* Ripple animation */
 .nav-btn .animation {
   border-radius: 100%;
   animation: ripple 0.6s linear infinite;
@@ -74,7 +60,7 @@ nav {
   margin: 2rem 0;
 }
 
-/* Glass container */
+/* Glass effect */
 .glass {
   background: var(--card-bg);
   backdrop-filter: blur(10px);
@@ -86,13 +72,12 @@ nav {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
 footer {
   margin-top: 3rem;
   font-size: 0.9rem;
 }
 
-/* Theme Toggle Switch (from Uiverse - Galahhad) */
+/* Theme Toggle (Uiverse by Galahhad) */
 .toggle-container {
   position: absolute;
   top: 10px;
@@ -169,7 +154,7 @@ footer {
   opacity: 1;
 }
 
-/* Animated buttons (Uiverse - mobinkakei) */
+/* Animated Buttons (mobinkakei) */
 .btn, .nav-btn {
   width: 140px;
   height: 50px;
@@ -207,17 +192,17 @@ footer {
 .btn:hover .btn-text-one, .nav-btn:hover .nav-btn-text-one { top: -100%; }
 .btn:hover .btn-text-two, .nav-btn:hover .nav-btn-text-two { top: 50%; }
 
-/* Profile Card (left center) */
+/* Profile Card Section (Left Center) */
 .profile-card-section {
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 10%; /* moved right */
   transform: translateY(-50%);
 }
 
 .card.profile-card {
-  width: 260px;       /* reduced width */
-  height: 480px;      /* increased height */
+  width: 260px;
+  height: 520px; /* increased height */
   background: var(--card-bg, #fff);
   color: var(--card-text, #1e293b);
   border-radius: 20px;
@@ -309,6 +294,7 @@ footer {
   transition: all 0.3s ease;
 }
 
+/* Dark mode card colors */
 body.dark .card.profile-card {
   --card-bg: #1a1a1a;
   --card-text: #f1f1f1;
