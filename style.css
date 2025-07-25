@@ -175,3 +175,83 @@ body {
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    height: 50px;
+  }
+
+  .card-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-section p {
+    font-size: 0.95rem;
+  }
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, auto);   /* 2 main rows + 2 spans */
+  gap: 1rem;
+  width: 100%;
+}
+.contact-grid input,
+.contact-grid textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+/* Contact Form - Match login box style */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.contact-grid input,
+.contact-grid textarea {
+  background-color: #111;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 14px;
+  margin-bottom: 1rem;
+  color: #eee;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 0.95rem;
+}
+
+.contact-grid textarea {
+  resize: none;
+}
+
+.contact-grid button {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-grid button:hover {
+  background-color: #444;
+}
+.card-section form {
+  margin-top: 2rem;
+}
+.contact-grid {
+  background-color: var(--main-bg);
+}
