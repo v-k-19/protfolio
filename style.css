@@ -2,8 +2,8 @@
   --text-color: #E0E0E0;
   --primary-color: #00ADB5;
   --page-bg: #121212;
-  --sidebar-bg: #272626;
-  --main-bg: #272626;
+  --sidebar-bg: hsl(240, 2%, 13%);
+  --main-bg:hsl(240, 2%, 13%);
   --accent: #00ADB5;
   --font: 'Segoe UI', sans-serif;
 }
@@ -103,6 +103,7 @@ body {
   margin-left: 30px;
   margin-top: 25px;
   padding-left: 30px;
+  padding-top: 25px;
 }
 
 
@@ -434,26 +435,92 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-.project-entry {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #333;
-}
-
 .project-entry h3,
 .project-entry h4 {
   color: #F8B259;
-  margin-top: 1rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-.project-entry p,
-.project-entry ul {
-  color: #ccc;
+/* Optional: style main page title like resume */
+.main-content h2 {
+  color: #F8B259;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-entry p {
+  margin-bottom: 1rem;
   font-size: 0.95rem;
+  color: #ccc;
+}
+
+.project-entry ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-entry li {
+  margin-bottom: 0.5rem;
+}
+
+.project-entry {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.home-summary {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 22%);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.home-summary h2 {
+  font-size: 1.5rem;
+  color: #F8B259;
+  margin-bottom: 1.5rem;
+}
+
+.summary-block {
+  margin-bottom: 2rem;
+}
+
+.summary-block h3 {
+  font-size: 1.1rem;
+  color: #F8B259;
+  margin-bottom: 0.8rem;
+}
+
+.summary-block p,
+.summary-block ul {
+  font-size: 0.95rem;
+  color: #ccc;
   line-height: 1.6;
 }
 
-.project-entry ul {
-  margin-left: 1.5rem;
+.summary-block ul {
+  padding-left: 1.5rem;
   list-style-type: disc;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
