@@ -255,3 +255,328 @@ body {
 .contact-grid {
   background-color: var(--main-bg);
 }
+.card-section h2,
+.card-section h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.card-section p,
+.card-section ul {
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.card-section ul {
+  padding-left: 1.2rem;
+}
+.social-icons {
+  margin-top: 400px;
+  padding-top:600px;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.icon.linkedin:hover {
+  background-color: #0a66c2;
+}
+
+.icon.github:hover {
+  background-color: #333;
+}
+
+.icon.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.icon.youtube:hover {
+  background-color: #ff0000;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 13rem;
+  padding-bottom: 1rem;
+  margin-left: auto;
+}
+.social-icons .icon:hover {
+  transform: scale(1.4);
+}
+.nav-inside .btn {
+  background: linear-gradient(to top, #F8B259, #f1a545, #d88a24); /* New warm gradient */
+  color: #121212; /* Dark text on light background */
+}
+.card-section h1,
+.card-section h2,
+.card-section h3 {
+  color: #F8B259;
+}
+
+/* === Color Styling for Buttons === */
+.btn {
+  background: linear-gradient(to top, #F8B259, #f1a545, #d88a24);
+  color: #121212;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn:hover .btn-text-one,
+.btn:hover .btn-text-two {
+  color: #fff;
+}
+
+/* === Headings & Subheadings in Both Panels === */
+h1, h2, h3, h4 {
+  color: #F8B259;
+}
+
+/* === Sidebar Role/Subheadings Styling === */
+.sidebar .role {
+  color: #F8B259;
+  font-weight: bold;
+}
+
+/* === Info Labels in Sidebar === */
+.sidebar .info strong {
+  color: #F8B259;
+}
+
+.social-icons {
+  display: flex !important;
+  justify-content: center;
+  gap: 0.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.social-icons .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons .icon img {
+  width: 26px;
+  height: 26px;
+}
+
+.social-icons .icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 6px;
+}
+.sidebar .info p {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: left;
+  padding-left: 10px;
+}
+.sidebar .info p::before {
+  display: inline-block;
+  min-width: 20px;
+}
+/* Sidebar Info Block */
+.sidebar .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 1.5rem;
+  width: 100%;
+}
+
+/* Style each info row */
+.sidebar .info p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Icon box container */
+.sidebar .info p::before {
+  content: '';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #1c1c1c;
+  box-shadow: inset 0 0 0 2px #F8B259;
+  font-size: 18px;
+  color: #F8B259;
+}
+
+/* Highlight the labels */
+.sidebar .info p strong {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+/* Email/Phone/Location values */
+.sidebar .info p br + * {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #eee;
+}
+/* Reset pseudo-icon box */
+.sidebar .info p::before {
+  content: '';
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #F8B259;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+/* Email icon */
+.sidebar .info p:nth-of-type(1)::before {
+  background-image: url('assets/email.svg');
+}
+
+/* Phone icon */
+.sidebar .info p:nth-of-type(2)::before {
+  background-image: url('assets/phone.svg');
+}
+
+/* Location icon */
+.sidebar .info p:nth-of-type(3)::before {
+  background-image: url('assets/location.svg');
+}
+
+.sidebar .info p strong {
+  display: block;
+  font-size: 0.75rem;
+  color: #F8B259;
+  letter-spacing: 0.5px;
+}
+
+.sidebar .info p {
+  line-height: 1.4;
+}
+
+/* Container: left-align everything */
+.sidebar .info {
+  text-align: left;
+  width: 100%;
+}
+
+/* Container for each contact row: icon + text side-by-side */
+.sidebar .info p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 10px;
+  text-align: left;
+}
+
+/* Label (e.g., Email:) */
+.sidebar .info p strong {
+  color: #F8B259;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* Value (after <br>) */
+.sidebar .info p br + * {
+  display: block;
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+  color: #eee;
+}
+
+/* Wrap label + value vertically beside the icon */
+.sidebar .info p > * {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar .info p br + * {
+  display: block;
+  margin-top: 0.15rem;
+  font-weight: bold;
+  color: #eee;
+}
+/* Ensure the entire info section is left-aligned */
+.sidebar .info {
+  text-align: left;
+}
+
+/* Make each <p> block stack its content vertically */
+.sidebar .info p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding-left: 10px;
+}
+
+/* Style the label (Email:, Phone:, etc.) */
+.sidebar .info p strong {
+  color: #F8B259;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Align the value (after <br>) to the left on the next line */
+.sidebar .info p br + * {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  color: #eee;
+}
